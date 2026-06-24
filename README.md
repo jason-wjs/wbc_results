@@ -2,8 +2,9 @@
 
 This repository is a lightweight experiment registry for WBC-related result
 packages. It stores conclusions, metrics summaries, reproducibility metadata,
-commands, checksums, and artifact links. It does not store raw rollouts, videos,
-checkpoints, logs, or local `outputs/` trees.
+commands, checksums, artifact links, and the shared testbed motion inputs under
+`assets/motion_data/`. It does not store raw rollouts, videos, checkpoints,
+logs, or local `outputs/` trees.
 
 Current experiment families:
 
@@ -17,6 +18,8 @@ referenced by local paths while migration is in progress.
 
 ```text
 wbc_results/
+  assets/
+    motion_data/
   schemas/
   templates/
   g1_body_tracking_wbc/
@@ -30,6 +33,19 @@ wbc_results/
 
 Each experiment package must be small enough to review in git. Use the template
 under `templates/experiment/`.
+
+## Versioned Assets
+
+`assets/motion_data/` contains the three shared testbed `motion.npz` inputs used
+by the migrated G1 body-tracking WBC packages:
+
+- `walk/motion.npz`
+- `jump/motion.npz`
+- `qixing/motion.npz`
+
+This is the only `.npz` exception in the repository. Rollouts, MPC command
+arrays, checkpoints, and other binary artifacts still stay outside git and are
+indexed in each package's `artifacts.md`.
 
 ## Package Contents
 

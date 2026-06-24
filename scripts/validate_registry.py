@@ -34,6 +34,11 @@ BANNED_SUFFIXES = {
     ".zip",
 }
 BANNED_NUMBER_STRINGS = {"nan", "+nan", "-nan", "inf", "+inf", "-inf"}
+ALLOWED_BINARY_ASSETS = {
+    Path("assets/motion_data/walk/motion.npz"),
+    Path("assets/motion_data/jump/motion.npz"),
+    Path("assets/motion_data/qixing/motion.npz"),
+}
 
 
 def fail(errors: list[str], message: str) -> None:
@@ -100,8 +105,13 @@ def main() -> int:
     errors: list[str] = []
 
     for path in ROOT.rglob("*"):
-        if path.is_file() and path.suffix.lower() in BANNED_SUFFIXES:
+        rel = path.relative_to(ROOT)
+        if path.is_file() and path.suffix.lower() in BANNED_SUFFIXES and rel not in ALLOWED_BINARY_ASSETS:
             fail(errors, f"{path.relative_to(ROOT)}: banned raw artifact suffix")
+
+    for rel in sorted(ALLOWED_BINARY_ASSETS):
+        if not (ROOT / rel).is_file():
+            fail(errors, f"{rel}: missing versioned testbed motion asset")
 
     package_roots = [
         ROOT / "g1_body_tracking_wbc" / "spider",

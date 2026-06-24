@@ -15,6 +15,12 @@
 *.tar.zst
 *.zip
 
+# Explicitly version the small shared testbed motion set.
+!assets/
+!assets/motion_data/
+!assets/motion_data/*/
+!assets/motion_data/*/motion.npz
+
 # Common raw-output directories
 checkpoints/
 logs/
@@ -32,4 +38,3 @@ stdout.txt
 .ruff_cache/
 .venv/
 __pycache__/
-
