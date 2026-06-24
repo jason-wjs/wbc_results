@@ -2,9 +2,10 @@
 
 This repository is a lightweight experiment registry for WBC-related result
 packages. It stores conclusions, metrics summaries, reproducibility metadata,
-commands, checksums, artifact links, and the shared testbed motion inputs under
-`assets/motion_data/`. It does not store raw rollouts, videos, checkpoints,
-logs, or local `outputs/` trees.
+commands, checksums, artifact links, the shared testbed motion inputs under
+`assets/motion_data/`, and versioned baseline checkpoints under
+`assets/checkpoints/` via Git LFS. It does not store raw rollouts, videos, logs,
+or local `outputs/` trees.
 
 Current experiment families:
 
@@ -19,6 +20,7 @@ referenced by local paths while migration is in progress.
 ```text
 wbc_results/
   assets/
+    checkpoints/
     motion_data/
   schemas/
   templates/
@@ -46,6 +48,14 @@ by the migrated G1 body-tracking WBC packages:
 This is the only `.npz` exception in the repository. Rollouts, MPC command
 arrays, checkpoints, and other binary artifacts still stay outside git and are
 indexed in each package's `artifacts.md`.
+
+`assets/checkpoints/` contains the baseline policy checkpoint currently used by
+the Spider no-MPC baseline:
+
+- `model_8000.pt`
+
+Checkpoint files are tracked with Git LFS. Do not add additional checkpoints
+unless they are part of the shared baseline contract for reviewed experiments.
 
 ## Package Contents
 

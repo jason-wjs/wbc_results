@@ -15,18 +15,23 @@
 *.tar.zst
 *.zip
 
-# Explicitly version the small shared testbed motion set.
-!assets/
-!assets/motion_data/
-!assets/motion_data/*/
-!assets/motion_data/*/motion.npz
-
 # Common raw-output directories
 checkpoints/
 logs/
 outputs/
 rollouts/
 videos/
+
+# Explicitly version the small shared testbed motion set.
+!assets/
+!assets/motion_data/
+!assets/motion_data/*/
+!assets/motion_data/*/motion.npz
+
+# Versioned baseline checkpoints are tracked via Git LFS.
+!assets/checkpoints/
+!assets/checkpoints/README.md
+!assets/checkpoints/*.pt
 
 # Captured command outputs
 stderr.txt

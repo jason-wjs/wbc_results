@@ -38,6 +38,7 @@ ALLOWED_BINARY_ASSETS = {
     Path("assets/motion_data/walk/motion.npz"),
     Path("assets/motion_data/jump/motion.npz"),
     Path("assets/motion_data/qixing/motion.npz"),
+    Path("assets/checkpoints/model_8000.pt"),
 }
 
 
