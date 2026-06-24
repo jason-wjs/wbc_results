@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WBC Experiment Manifest",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "task_family",
+    "source_project",
+    "owner",
+    "runners",
+    "completed_at",
+    "migrated_at",
+    "status",
+    "confidence",
+    "files"
+  ],
+  "properties": {
+    "experiment_id": {"type": "string"},
+    "task_family": {"type": "string"},
+    "source_project": {"type": "string"},
+    "source_repo": {"type": "string"},
+    "source_commit": {"type": "string"},
+    "source_branch": {"type": "string"},
+    "owner": {"type": "string"},
+    "runners": {"type": "array", "items": {"type": "string"}},
+    "completed_at": {"type": "string"},
+    "migrated_at": {"type": "string"},
+    "migrated_by": {"type": "string"},
+    "status": {
+      "type": "string",
+      "enum": ["baseline", "preliminary", "validated", "superseded", "deprecated"]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "baseline"]
+    },
+    "artifact_root": {"type": "string"},
+    "motions": {"type": "array", "items": {"type": "string"}},
+    "primary_claims": {"type": "array"},
+    "artifact_policy": {"type": "object"},
+    "files": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,59 @@
+experiment_id: 2026-06-23-mechanism-quality-speed-wjs
+task_family: g1_body_tracking_wbc
+source_project: spider
+source_repo: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider
+source_branch: dev-wjs
+source_commit: 51a4b8298c31191ace2c9e0eaa0a098e4f9c362a
+source_status_short: "M uv.lock; ?? AGENTS.md; ?? docs/superpowers/plans/2026-06-23-g1-wbc-mechanism-quality-speed-plan.md; ?? docs/superpowers/specs/2026-06-23-g1-wbc-mechanism-quality-speed-design.md"
+
+owner: wjs
+runners:
+  - wjs
+
+completed_at: 2026-06-23
+migrated_at: 2026-06-24
+migrated_by: wjs
+
+status: preliminary
+confidence: medium
+artifact_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider/outputs/g1_wbc_mechanism_20260623
+
+motions:
+  - jump
+  - walk
+  - qixing
+methods:
+  - g1_wbc_joint_global
+
+primary_claims:
+  - id: sample-budget-sweetpoint
+    text: On jump under the base structure, s512 is the current sample sweet point; s2048 has limited quality gain and much higher runtime.
+    confidence: medium
+    evidence: stage_a_budget_curve and stage_a_jump_repeats summaries.
+    limitations: Walk and qixing budget curves are seed0 only.
+  - id: structure-anchor
+    text: i2/h40/c20/k8 is the speed-quality anchor; i3/s512 is the quality-oriented candidate.
+    confidence: medium
+    evidence: stage_b_structure summaries.
+    limitations: Stage B is jump-only seed0.
+  - id: command-reg-candidate
+    text: command_reg_weight=0.005 is the strongest speed-quality mechanism candidate found in this stage.
+    confidence: medium
+    evidence: stage_c_mechanisms/command_reg005 summary.
+    limitations: Needs multi-seed and cross-motion validation.
+
+artifact_policy:
+  raw_artifacts_in_git: false
+  indexed_in: artifacts.md
+  external_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider/outputs/g1_wbc_mechanism_20260623
+
+files:
+  report: report.md
+  primary_metrics: primary_metrics.csv
+  run_index: run_index.csv
+  commands: commands.sh
+  artifacts: artifacts.md
+  reward_weights: configs/g1_wbc_reward_weights_method_specific_v14_20260612.json
+  summaries: configs/summaries/
+  source_design: configs/source_design.md
+  source_plan: configs/source_plan.md

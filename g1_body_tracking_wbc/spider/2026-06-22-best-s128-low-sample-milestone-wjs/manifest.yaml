@@ -1,0 +1,52 @@
+experiment_id: 2026-06-22-best-s128-low-sample-milestone-wjs
+task_family: g1_body_tracking_wbc
+source_project: spider
+source_repo: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider
+source_branch: dev-wjs
+source_commit: 51a4b8298c31191ace2c9e0eaa0a098e4f9c362a
+
+owner: wjs
+runners:
+  - wjs
+
+completed_at: 2026-06-22
+migrated_at: 2026-06-24
+migrated_by: wjs
+
+status: validated
+confidence: medium
+artifact_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider/outputs/g1_wbc_metrics_sync_20260623
+
+motions:
+  - jump
+  - qixing
+  - walk
+
+experiment_families:
+  - low_latency_tuning_20260619
+
+primary_claims:
+  - id: best-s128-lower-bound
+    text: best_s128 is the accepted low-sample quality lower bound before mechanism experiments.
+    confidence: medium
+    evidence: milestone_snapshot.md and low_latency_tuning rows
+    limitations: Historical jump best metrics and visualized rerun differ because the best metrics run did not retain rollout.npz.
+  - id: speed-advantage
+    text: best_s128 preserves a large speed advantage over the packaged 8192-sample baseline.
+    confidence: medium
+    evidence: duration_sec in primary_metrics.csv
+    limitations: Timings mix historical 4070 Laptop and packaged 4090 sources, so use as directional evidence.
+
+artifact_policy:
+  raw_artifacts_in_git: false
+  indexed_in: artifacts.md
+  external_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider/outputs/g1_wbc_metrics_sync_20260623
+
+files:
+  report: report.md
+  primary_metrics: primary_metrics.csv
+  run_index: run_index.csv
+  commands: commands.sh
+  artifacts: artifacts.md
+  source_commands: configs/source_commands.csv
+  source_milestone: configs/source_milestone_snapshot.md

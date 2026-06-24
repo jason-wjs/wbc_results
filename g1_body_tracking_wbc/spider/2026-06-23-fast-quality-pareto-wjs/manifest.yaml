@@ -1,0 +1,50 @@
+experiment_id: 2026-06-23-fast-quality-pareto-wjs
+task_family: g1_body_tracking_wbc
+source_project: spider
+source_repo: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider
+source_branch: dev-wjs
+source_commit: 51a4b8298c31191ace2c9e0eaa0a098e4f9c362a
+
+owner: wjs
+runners:
+  - wjs
+
+completed_at: 2026-06-23
+migrated_at: 2026-06-24
+migrated_by: wjs
+
+status: preliminary
+confidence: medium
+artifact_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider/outputs/g1_wbc_metrics_sync_20260623
+
+motions:
+  - jump
+
+experiment_families:
+  - fast_quality_pareto_20260623
+
+primary_claims:
+  - id: sample-budget-repeatability
+    text: Single-rollout comparisons are insufficient because repeated seeds show outcome variance.
+    confidence: medium
+    evidence: fast_quality_pareto rows across seeds
+    limitations: Jump-only probe; not a full cross-motion validation.
+  - id: pareto-input
+    text: The Pareto probe motivated the next mechanism experiment rather than being a final algorithmic solution.
+    confidence: medium
+    evidence: pareto_summary.csv and primary_metrics.csv
+    limitations: Only a compact candidate family was tested.
+
+artifact_policy:
+  raw_artifacts_in_git: false
+  indexed_in: artifacts.md
+  external_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider/outputs/g1_wbc_metrics_sync_20260623
+
+files:
+  report: report.md
+  primary_metrics: primary_metrics.csv
+  run_index: run_index.csv
+  commands: commands.sh
+  artifacts: artifacts.md
+  source_commands: configs/source_commands.csv
+  source_milestone: configs/source_milestone_snapshot.md

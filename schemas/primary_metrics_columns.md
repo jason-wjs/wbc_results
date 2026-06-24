@@ -1,0 +1,34 @@
+# Primary Metrics Columns
+
+Required columns:
+
+```text
+experiment_id
+run_id
+source_project
+motion
+method
+checkpoint
+config_label
+seed
+status
+success
+score
+root_pos_error_mean
+body_global_pos_error_mean
+ee_global_pos_error_mean
+global_sum
+body_local_pos_error_mean
+ee_local_pos_error_mean
+local_sum
+contact_mismatch_rate
+control_delta_mean
+joint_acc_mean
+duration_sec
+artifact_ref
+notes
+```
+
+Optional columns may be appended after the required columns. Keep columns
+stable across packages when possible.
+

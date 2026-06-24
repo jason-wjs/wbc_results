@@ -1,0 +1,29 @@
+experiment_id: YYYY-MM-DD-topic-runner
+task_family: g1_body_tracking_wbc
+source_project: spider
+source_repo: ""
+source_branch: ""
+source_commit: ""
+
+owner: runner
+runners:
+  - runner
+
+completed_at: YYYY-MM-DD
+migrated_at: YYYY-MM-DD
+migrated_by: ""
+
+status: preliminary
+confidence: medium
+artifact_root: ""
+
+motions: []
+primary_claims: []
+
+files:
+  report: report.md
+  primary_metrics: primary_metrics.csv
+  run_index: run_index.csv
+  commands: commands.sh
+  artifacts: artifacts.md
+

@@ -1,0 +1,49 @@
+experiment_id: 2026-06-17-testbed-motion-baselines-xwj
+task_family: g1_body_tracking_wbc
+source_project: spider
+source_repo: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/spider
+source_branch: dev-wjs
+source_commit: 51a4b8298c31191ace2c9e0eaa0a098e4f9c362a
+source_status_short: "M uv.lock; ?? AGENTS.md; ?? docs/superpowers/plans/2026-06-23-g1-wbc-mechanism-quality-speed-plan.md; ?? docs/superpowers/specs/2026-06-23-g1-wbc-mechanism-quality-speed-design.md"
+
+owner: xwj
+runners:
+  - xwj
+
+completed_at: 2026-06-17
+migrated_at: 2026-06-24
+migrated_by: wjs
+
+status: baseline
+confidence: baseline
+artifact_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/g1_wbc_testbed_motion_package_20260617
+
+motions:
+  - walk
+  - jump
+  - qixing
+methods:
+  - no_mpc
+  - g1_wbc_joint
+  - g1_wbc_joint_global
+  - g1_wbc_ee
+
+primary_claims:
+  - id: baseline-anchor
+    text: Packaged testbed baselines establish reference metrics and artifacts for walk, jump, and qixing; 9 Spider-native WBC rows are the primary baseline comparison, and 3 no-MPC rows are reference anchors.
+    confidence: baseline
+    evidence: primary_metrics.csv and run_index.csv
+    limitations: Jump Spider-native rows still have success=false, so score improvements must be interpreted with motion-completion status.
+
+artifact_policy:
+  raw_artifacts_in_git: false
+  indexed_in: artifacts.md
+  external_root: /home/wujs/Projects/BrainStorm/Learning/RL/model-based/g1_wbc_testbed_motion_package_20260617
+
+files:
+  report: report.md
+  primary_metrics: primary_metrics.csv
+  run_index: run_index.csv
+  commands: commands.sh
+  artifacts: artifacts.md
+  reward_weights: configs/g1_wbc_reward_weights_method_specific_v14_20260612.json

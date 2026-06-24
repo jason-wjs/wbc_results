@@ -1,0 +1,35 @@
+# This repository is an experiment registry, not artifact storage.
+
+# Large binary artifacts
+*.avi
+*.ckpt
+*.log
+*.mov
+*.mp4
+*.npy
+*.npz
+*.pth
+*.pt
+*.tar
+*.tar.gz
+*.tar.zst
+*.zip
+
+# Common raw-output directories
+checkpoints/
+logs/
+outputs/
+rollouts/
+videos/
+
+# Captured command outputs
+stderr.txt
+stdout.txt
+
+# Local/editor files
+.DS_Store
+.idea/
+.ruff_cache/
+.venv/
+__pycache__/
+

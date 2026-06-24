@@ -1,0 +1,8 @@
+candidate,motion,status,passed,failure_labels,improved_local_count,global_guardrail_passed,smooth_guardrail_passed,contact_guardrail_passed,score_guardrail_passed,local_guardrail_passed,mpc_guardrail_passed,runtime_guardrail_passed,summary_csv
+jg_s128_v14_control,jump,failed,false,"score_guardrail,contact_guardrail,local_improvement_guardrail",0,true,true,false,false,false,true,true,/tmp/g1_wbc_local_recovery_gpu_20260622_cuda/candidates/jg_s128_v14_control/summary.csv
+jg_s128_L148_posture,jump,passed,true,,2,true,true,true,true,true,true,true,/tmp/g1_wbc_local_recovery_gpu_20260622_cuda/candidates/jg_s128_L148_posture/summary.csv
+jg_s128_L148_smooth010,jump,failed,false,"score_guardrail,contact_guardrail",3,true,true,false,false,true,true,true,/tmp/g1_wbc_local_recovery_gpu_20260622_cuda/candidates/jg_s128_L148_smooth010/summary.csv
+jg_s128_L148_contact010,jump,failed,false,global_guardrail,2,false,true,true,true,true,true,true,/tmp/g1_wbc_local_recovery_gpu_20260622_cuda/candidates/jg_s128_L148_contact010/summary.csv
+jg_s128_L148_smooth010_contact010,jump,failed,false,"contact_guardrail,local_improvement_guardrail",0,true,true,false,true,false,true,true,/tmp/g1_wbc_local_recovery_gpu_20260622_cuda/candidates/jg_s128_L148_smooth010_contact010/summary.csv
+jg_s128_L142_smooth005_contact010,jump,failed,false,contact_guardrail,3,true,true,false,true,true,true,true,/tmp/g1_wbc_local_recovery_gpu_20260622_cuda/candidates/jg_s128_L142_smooth005_contact010/summary.csv
+jg_s128_L145_smooth010_contact010,jump,failed,false,"smooth_guardrail,contact_guardrail,local_improvement_guardrail",0,true,false,false,true,false,true,true,/tmp/g1_wbc_local_recovery_gpu_20260622_cuda/candidates/jg_s128_L145_smooth010_contact010/summary.csv
