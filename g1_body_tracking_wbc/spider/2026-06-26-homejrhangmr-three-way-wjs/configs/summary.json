@@ -1,0 +1,172 @@
+{
+  "checkpoint": "/data_team/junsong/model-based/wbc_results/assets/checkpoints/model_8000.pt",
+  "comparison": {
+    "contact_mismatch_delta_n8192_vs_sweetpoint": 0.015988372266292572,
+    "contact_mismatch_winner": "sweetpoint",
+    "global_tracking_winner": "n8192",
+    "root_pos_error_reduction_n8192_vs_sweetpoint": 0.025182466953992844,
+    "score_delta_n8192_vs_no_mpc_baseline": 0.7583831686526538,
+    "score_delta_n8192_vs_sweetpoint": 0.029317323490977265,
+    "score_winner": "n8192",
+    "smoothness_winner": "n8192"
+  },
+  "experiment_id": "2026-06-26-homejrhangmr-three-way-wjs",
+  "motion": "/data_zcy/wxy/test_motion/homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl/motion.npz",
+  "reward_weights": "/data_team/junsong/model-based/wbc_results/g1_body_tracking_wbc/spider/2026-06-23-mechanism-quality-speed-wjs/configs/g1_wbc_reward_weights_method_specific_v14_20260612.json",
+  "runs": [
+    {
+      "artifacts": {
+        "log": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/logs/no_mpc.log",
+        "metrics": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/no_mpc/metrics.json",
+        "mpc_command": null,
+        "rollout": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/no_mpc/rollout.npz"
+      },
+      "config_label": "no_mpc_baseline",
+      "description": "policy-only no-MPC baseline",
+      "metrics": {
+        "action_delta_mean": 0.37205103039741516,
+        "body_global_pos_error_mean": 0.22269439697265625,
+        "body_global_rot_error_mean": 0.1251491904258728,
+        "body_local_pos_error_mean": 0.028711015358567238,
+        "contact_false_negative_rate": 0.01014492753893137,
+        "contact_false_positive_rate": 0.06521739065647125,
+        "contact_mismatch_rate": 0.07536232471466064,
+        "contact_switch_rate": 0.03488372266292572,
+        "control_delta_mean": 0.15619595348834991,
+        "ee_global_pos_error_mean": 0.22032558917999268,
+        "ee_local_pos_error_mean": 0.04334638640284538,
+        "hand_global_pos_error_mean": 0.22541436553001404,
+        "joint_acc_mean": 77.777099609375,
+        "joint_jerk_mean": 83.64653778076172,
+        "joint_pos_error_mean": 0.5143464803695679,
+        "joint_vel_error_mean": 2.1300270557403564,
+        "num_steps": 345.0,
+        "root_pos_error_max": 0.3215476870536804,
+        "root_pos_error_mean": 0.223149374127388,
+        "root_rot_error_mean": 0.08713731169700623,
+        "score": -1.6335754193365575,
+        "success": true
+      },
+      "mpc": {
+        "control_steps": null,
+        "final_scores_max": null,
+        "final_scores_mean": null,
+        "joint_sigma": null,
+        "knot_count": null,
+        "num_iterations": null,
+        "num_samples": null,
+        "num_windows": null,
+        "planning_horizon_steps": null,
+        "root_pos_sigma": null,
+        "root_rot_sigma": null,
+        "temperature": null
+      },
+      "run_id": "2026-06-26-homejrhangmr-three-way-wjs__homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl__motion__no_mpc_baseline"
+    },
+    {
+      "artifacts": {
+        "log": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/logs/sweetpoint.log",
+        "metrics": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/sweetpoint/metrics.json",
+        "mpc_command": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/sweetpoint/mpc_command.npz",
+        "rollout": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/sweetpoint/rollout.npz",
+        "versioned_rollout": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz"
+      },
+      "config_label": "sweetpoint",
+      "description": "s512/i2/h40/c20/k8, sigma=0.04/0.10/0.18",
+      "metrics": {
+        "action_delta_mean": 0.4186702370643616,
+        "body_global_pos_error_mean": 0.08202612400054932,
+        "body_global_rot_error_mean": 0.12280035018920898,
+        "body_local_pos_error_mean": 0.027553612366318703,
+        "contact_false_negative_rate": 0.00872093066573143,
+        "contact_false_positive_rate": 0.05232558026909828,
+        "contact_mismatch_rate": 0.06104651093482971,
+        "contact_switch_rate": 0.02332361601293087,
+        "control_delta_mean": 0.17774119973182678,
+        "ee_global_pos_error_mean": 0.07857215404510498,
+        "ee_local_pos_error_mean": 0.040892593562603,
+        "hand_global_pos_error_mean": 0.08806261420249939,
+        "joint_acc_mean": 81.98091125488281,
+        "joint_jerk_mean": 95.95443725585938,
+        "joint_pos_error_mean": 0.5146216750144958,
+        "joint_vel_error_mean": 2.3144941329956055,
+        "num_steps": 344.0,
+        "root_pos_error_max": 0.14960600435733795,
+        "root_pos_error_mean": 0.07930073887109756,
+        "root_rot_error_mean": 0.07936212420463562,
+        "score": -0.904509574174881,
+        "success": true
+      },
+      "mpc": {
+        "control_steps": 20,
+        "final_scores_max": -6.439857006072998,
+        "final_scores_mean": -7.127065658569336,
+        "joint_sigma": 0.18,
+        "knot_count": 8,
+        "num_iterations": 2,
+        "num_samples": 512,
+        "num_windows": 18,
+        "planning_horizon_steps": 40,
+        "root_pos_sigma": 0.04,
+        "root_rot_sigma": 0.1,
+        "temperature": 0.7
+      },
+      "run_id": "2026-06-26-homejrhangmr-three-way-wjs__homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl__motion__sweetpoint"
+    },
+    {
+      "artifacts": {
+        "log": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/logs/n8192_gpu2.log",
+        "metrics": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/n8192/metrics.json",
+        "mpc_command": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/n8192/mpc_command.npz",
+        "rollout": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/n8192/rollout.npz",
+        "versioned_rollout": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz"
+      },
+      "config_label": "n8192",
+      "description": "s8192/i2/h80/c20/k8, sigma=0.08/0.18/0.28",
+      "metrics": {
+        "action_delta_mean": 0.35411614179611206,
+        "body_global_pos_error_mean": 0.055350277572870255,
+        "body_global_rot_error_mean": 0.11001197248697281,
+        "body_local_pos_error_mean": 0.026762312278151512,
+        "contact_false_negative_rate": 0.018895348533988,
+        "contact_false_positive_rate": 0.058139532804489136,
+        "contact_mismatch_rate": 0.07703488320112228,
+        "contact_switch_rate": 0.040816329419612885,
+        "control_delta_mean": 0.14736945927143097,
+        "ee_global_pos_error_mean": 0.05297475308179855,
+        "ee_local_pos_error_mean": 0.039655670523643494,
+        "hand_global_pos_error_mean": 0.0603027381002903,
+        "joint_acc_mean": 70.79092407226562,
+        "joint_jerk_mean": 78.83219909667969,
+        "joint_pos_error_mean": 0.49773159623146057,
+        "joint_vel_error_mean": 2.040661573410034,
+        "num_steps": 344.0,
+        "root_pos_error_max": 0.12649933993816376,
+        "root_pos_error_mean": 0.05411827191710472,
+        "root_rot_error_mean": 0.06841135770082474,
+        "score": -0.8751922506839037,
+        "success": true
+      },
+      "mpc": {
+        "control_steps": 20,
+        "final_scores_max": -3.797940492630005,
+        "final_scores_mean": -5.284255027770996,
+        "joint_sigma": 0.28,
+        "knot_count": 8,
+        "num_iterations": 2,
+        "num_samples": 8192,
+        "num_windows": 18,
+        "planning_horizon_steps": 80,
+        "root_pos_sigma": 0.08,
+        "root_rot_sigma": 0.18,
+        "temperature": 0.7
+      },
+      "run_id": "2026-06-26-homejrhangmr-three-way-wjs__homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl__motion__n8192"
+    }
+  ],
+  "source_root": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626",
+  "versioned_result_assets": {
+    "n8192": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz",
+    "sweetpoint": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "benchmark": "g1_wbc_bench_data_phase1",
+  "checkpoint": "/data_team/junsong/model-based/wbc_results/assets/checkpoints/model_8000.pt",
+  "checkpoint_sha256": "98738b9214d12146dc7f4669cb65dfde9d835f4a133e5f2cbaef4e60b1e5b88f",
+  "comparison": "three-way",
+  "created_at": "2026-06-25T12:07:18",
+  "devices": [
+    "cuda:0",
+    "cuda:1",
+    "cuda:2",
+    "cuda:3"
+  ],
+  "dry_run": false,
+  "eval": {
+    "device": "cuda:0",
+    "max_steps_cap": null,
+    "motion_type": "isaaclab",
+    "python_executable": "/data_team/junsong/model-based/spider/.venv/bin/python"
+  },
+  "methods": [
+    "no_mpc",
+    "g1_wbc_joint_global",
+    "g1_wbc_joint_global"
+  ],
+  "mode": "full",
+  "mpc": {
+    "acceptance_gate": true,
+    "command_reg_weight": 0.0,
+    "command_smooth_weight": 0.0,
+    "control_steps": 20,
+    "guided_candidate": true,
+    "guided_joint_clip": 0.35,
+    "guided_joint_gain": 0.5,
+    "guided_root_pos_clip": 0.05,
+    "guided_root_pos_gain": 0.5,
+    "guided_root_rot_clip": 0.12,
+    "guided_root_rot_gain": 0.5,
+    "iterations": 2,
+    "joint_sigma": 0.28,
+    "knot_count": 8,
+    "planning_horizon_steps": 80,
+    "preset": "aggressive",
+    "root_pos_sigma": 0.08,
+    "root_rot_sigma": 0.18,
+    "samples": 8192,
+    "sampling_mode": "knot",
+    "seed": 0,
+    "smooth_passes": 0,
+    "temperature": 0.7
+  },
+  "package_dir": "/data_team/junsong/model-based/spider/outputs/g1_wbc_bench_data_three_way_metrics_20260625",
+  "panel_order": [
+    "no_mpc_baseline",
+    "best_s128",
+    "sweetpoint"
+  ],
+  "reward_weights": "/data_team/junsong/model-based/wbc_results/g1_body_tracking_wbc/spider/2026-06-23-mechanism-quality-speed-wjs/configs/g1_wbc_reward_weights_method_specific_v14_20260612.json",
+  "reward_weights_sha256": "bb0490a71a27a29480f13ce77bc00c13a900845f0f52641b5ec20d51ebaa535d",
+  "schema_version": 1,
+  "thresholds": {
+    "contact_mismatch_rate": 0.35,
+    "ee_global_pos_error_mean": 0.25,
+    "ee_local_pos_error_mean": 0.2,
+    "root_pos_error_mean": 0.25,
+    "root_rot_error_mean": 0.6
+  },
+  "variants": [
+    {
+      "label": "no_mpc_baseline",
+      "method": "no_mpc"
+    },
+    {
+      "label": "best_s128",
+      "method": "g1_wbc_joint_global",
+      "mpc": {
+        "acceptance_gate": true,
+        "command_reg_weight": 0.0,
+        "command_smooth_weight": 0.0,
+        "control_steps": 20,
+        "guided_candidate": true,
+        "guided_joint_clip": 0.35,
+        "guided_joint_gain": 0.5,
+        "guided_root_pos_clip": 0.05,
+        "guided_root_pos_gain": 0.5,
+        "guided_root_rot_clip": 0.12,
+        "guided_root_rot_gain": 0.5,
+        "iterations": 2,
+        "joint_sigma": 0.18,
+        "knot_count": 8,
+        "planning_horizon_steps": 40,
+        "preset": "aggressive",
+        "root_pos_sigma": 0.04,
+        "root_rot_sigma": 0.1,
+        "samples": 128,
+        "sampling_mode": "knot",
+        "seed": 0,
+        "smooth_passes": 0,
+        "temperature": 0.7
+      }
+    },
+    {
+      "label": "sweetpoint",
+      "method": "g1_wbc_joint_global",
+      "mpc": {
+        "acceptance_gate": true,
+        "command_reg_weight": 0.0,
+        "command_smooth_weight": 0.0,
+        "control_steps": 20,
+        "guided_candidate": true,
+        "guided_joint_clip": 0.35,
+        "guided_joint_gain": 0.5,
+        "guided_root_pos_clip": 0.05,
+        "guided_root_pos_gain": 0.5,
+        "guided_root_rot_clip": 0.12,
+        "guided_root_rot_gain": 0.5,
+        "iterations": 2,
+        "joint_sigma": 0.18,
+        "knot_count": 8,
+        "planning_horizon_steps": 40,
+        "preset": "aggressive",
+        "root_pos_sigma": 0.04,
+        "root_rot_sigma": 0.1,
+        "samples": 512,
+        "sampling_mode": "knot",
+        "seed": 0,
+        "smooth_passes": 0,
+        "temperature": 0.7
+      }
+    }
+  ],
+  "workspace_root": "/data_team/junsong/model-based"
+}

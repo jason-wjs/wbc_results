@@ -1,0 +1,55 @@
+experiment_id: 2026-06-25-bench-data-three-way-metrics-wjs
+task_family: g1_body_tracking_wbc
+source_project: spider
+source_repo: /data_team/junsong/model-based/spider
+source_branch: dev-wjs
+source_commit: 2a4b907a74751b7bb8765c81563ecf6cc297f37d
+source_dirty: true
+
+owner: wjs
+runners:
+  - codex
+
+completed_at: 2026-06-25
+migrated_at: 2026-06-25
+migrated_by: codex
+
+status: validated
+confidence: medium
+artifact_root: /data_team/junsong/model-based/spider/outputs/g1_wbc_bench_data_three_way_metrics_20260625
+
+motions:
+  - bench_data_duration_le_60s_full_length_26_motions
+
+primary_claims:
+  - id: sweetpoint-best-overall
+    text: sweetpoint is the best overall configuration on the 26-motion metrics-only bench_data subset.
+    confidence: medium
+    evidence: method_ranking.csv and baseline_vs_mpc_score.csv
+    limitations: single seed 0, no video review in this run, concurrent external GPU jobs affected wall-clock timing.
+  - id: no-render-complete
+    text: The package contains complete metrics for 26 motions x 3 configurations and no rendered videos.
+    confidence: high
+    evidence: package_summary.json, run_index.csv, commands.sh
+    limitations: rollout artifacts remain external under artifact_root.
+
+artifact_policy:
+  raw_artifacts_in_git: false
+  indexed_in: artifacts.md
+  external_root: /data_team/junsong/model-based/spider/outputs/g1_wbc_bench_data_three_way_metrics_20260625
+
+files:
+  report: report.md
+  primary_metrics: primary_metrics.csv
+  run_index: run_index.csv
+  commands: commands.sh
+  artifacts: artifacts.md
+  benchmark_summary: configs/benchmark_summary.md
+  method_ranking: configs/method_ranking.csv
+  baseline_vs_mpc_score: configs/baseline_vs_mpc_score.csv
+  baseline_vs_mpc_full_deltas: configs/baseline_vs_mpc_full_deltas.csv
+  motion_failures: configs/motion_failures.csv
+  runtime_summary: configs/runtime_summary.csv
+  category_summary: configs/category_summary.csv
+  benchmark_config: configs/benchmark_config.json
+  package_summary: configs/package_summary.json

@@ -1,0 +1,68 @@
+experiment_id: 2026-06-26-homejrhangmr-three-way-wjs
+task_family: g1_body_tracking_wbc
+source_project: spider
+source_repo: /data_team/junsong/model-based/spider
+source_branch: dev-wjs
+source_commit: 2a4b907a74751b7bb8765c81563ecf6cc297f37d
+source_dirty: true
+
+owner: wjs
+runners:
+  - codex
+  - wjs
+
+completed_at: 2026-06-26
+migrated_at: 2026-06-26
+migrated_by: codex
+
+status: preliminary
+confidence: medium
+artifact_root: /data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626
+
+motions:
+  - /data_zcy/wxy/test_motion/homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl/motion.npz
+methods:
+  - no_mpc_baseline
+  - sweetpoint
+  - n8192
+
+primary_claims:
+  - id: n8192-best-tracking
+    text: On this single motion, n8192 has the best score, global tracking, joint tracking, and smoothness metrics.
+    confidence: medium
+    evidence: primary_metrics.csv and configs/summary.csv
+    limitations: single motion, seed 0, no render review.
+  - id: sweetpoint-best-contact
+    text: sweetpoint has the lowest contact mismatch rate and fewer contact false negatives than n8192 on this motion.
+    confidence: medium
+    evidence: primary_metrics.csv and configs/summary.csv
+    limitations: no video review; this is not a full bench_data aggregate.
+  - id: rollout-results-indexed
+    text: sweetpoint and n8192 rollout artifacts are stored under assets/results for this approved exception; MPC command artifacts remain externally indexed.
+    confidence: high
+    evidence: assets/results/2026-06-26-homejrhangmr-three-way-wjs, configs/rollout_index.csv, and artifacts.md
+    limitations: this is a one-off exception, not a general raw artifact policy change.
+
+artifact_policy:
+  raw_artifacts_in_git: false
+  indexed_in: artifacts.md
+  external_root: /data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626
+  versioned_result_exception:
+    approved: true
+    location: assets/results/2026-06-26-homejrhangmr-three-way-wjs
+    assets:
+      - assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz
+      - assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz
+
+files:
+  report: report.md
+  primary_metrics: primary_metrics.csv
+  run_index: run_index.csv
+  commands: commands.sh
+  artifacts: artifacts.md
+  summary_csv: configs/summary.csv
+  summary_json: configs/summary.json
+  rollout_index_csv: configs/rollout_index.csv
+  rollout_index_json: configs/rollout_index.json
+  versioned_sweetpoint_rollout: ../../../assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz
+  versioned_n8192_rollout: ../../../assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz

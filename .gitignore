@@ -28,6 +28,11 @@ videos/
 !assets/motion_data/*/
 !assets/motion_data/*/motion.npz
 
+# Explicit one-off result assets approved for versioning.
+!assets/results/
+!assets/results/*/
+!assets/results/*/*.npz
+
 # Versioned baseline checkpoints are tracked via Git LFS.
 !assets/checkpoints/
 !assets/checkpoints/README.md
