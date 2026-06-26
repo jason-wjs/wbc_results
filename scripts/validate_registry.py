@@ -41,6 +41,8 @@ ALLOWED_BINARY_ASSETS = {
     Path("assets/checkpoints/model_8000.pt"),
     Path("assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz"),
     Path("assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz"),
+    Path("assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_mpc_command.npz"),
+    Path("assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_mpc_command.npz"),
 }
 
 

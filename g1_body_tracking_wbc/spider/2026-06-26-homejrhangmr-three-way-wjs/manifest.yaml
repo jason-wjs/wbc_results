@@ -38,7 +38,7 @@ primary_claims:
     evidence: primary_metrics.csv and configs/summary.csv
     limitations: no video review; this is not a full bench_data aggregate.
   - id: rollout-results-indexed
-    text: sweetpoint and n8192 rollout artifacts are stored under assets/results for this approved exception; MPC command artifacts remain externally indexed.
+    text: sweetpoint and n8192 rollout and MPC command artifacts are stored under assets/results for this approved exception.
     confidence: high
     evidence: assets/results/2026-06-26-homejrhangmr-three-way-wjs, configs/rollout_index.csv, and artifacts.md
     limitations: this is a one-off exception, not a general raw artifact policy change.
@@ -53,6 +53,8 @@ artifact_policy:
     assets:
       - assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz
       - assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz
+      - assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_mpc_command.npz
+      - assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_mpc_command.npz
 
 files:
   report: report.md
@@ -66,3 +68,5 @@ files:
   rollout_index_json: configs/rollout_index.json
   versioned_sweetpoint_rollout: ../../../assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz
   versioned_n8192_rollout: ../../../assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz
+  versioned_sweetpoint_mpc_command: ../../../assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_mpc_command.npz
+  versioned_n8192_mpc_command: ../../../assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_mpc_command.npz

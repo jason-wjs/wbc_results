@@ -154,5 +154,29 @@
     "run_id": "2026-06-26-homejrhangmr-three-way-wjs__homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl__motion__n8192",
     "sha256": "e5e0de36b62ec328899ca28a744b1d1e665ecbc462c0a3189f8e52cd250ea1cb",
     "stored_in_git": "true"
+  },
+  {
+    "artifact_type": "versioned_mpc_command",
+    "bytes": "472413",
+    "config_label": "sweetpoint",
+    "experiment_id": "2026-06-26-homejrhangmr-three-way-wjs",
+    "mtime_utc": "2026-06-26T12:44:12.968903+00:00",
+    "notes": "versioned npz under assets/results; approved one-off exception",
+    "path": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_mpc_command.npz",
+    "run_id": "2026-06-26-homejrhangmr-three-way-wjs__homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl__motion__sweetpoint",
+    "sha256": "0e8b727b562f4cc0dfc01736963396b0ad0f3cf4fa6576d9d333f1f4f6483ba7",
+    "stored_in_git": "true"
+  },
+  {
+    "artifact_type": "versioned_mpc_command",
+    "bytes": "497335",
+    "config_label": "n8192",
+    "experiment_id": "2026-06-26-homejrhangmr-three-way-wjs",
+    "mtime_utc": "2026-06-26T12:44:12.958411+00:00",
+    "notes": "versioned npz under assets/results; approved one-off exception",
+    "path": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_mpc_command.npz",
+    "run_id": "2026-06-26-homejrhangmr-three-way-wjs__homejrhangmr_dataset_pbhc_contact_maskACCADFemale1Walking_c3dB19-walktopickupbox_posespkl__motion__n8192",
+    "sha256": "b6ba02fff3809be639c14a1458ecd4f83e11b3ffa6ac90c2a5786a8878071912",
+    "stored_in_git": "true"
   }
 ]

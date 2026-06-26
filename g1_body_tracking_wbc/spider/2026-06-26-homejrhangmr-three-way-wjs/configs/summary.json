@@ -69,6 +69,7 @@
         "metrics": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/sweetpoint/metrics.json",
         "mpc_command": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/sweetpoint/mpc_command.npz",
         "rollout": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/sweetpoint/rollout.npz",
+        "versioned_mpc_command": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_mpc_command.npz",
         "versioned_rollout": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz"
       },
       "config_label": "sweetpoint",
@@ -119,6 +120,7 @@
         "metrics": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/n8192/metrics.json",
         "mpc_command": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/n8192/mpc_command.npz",
         "rollout": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626/n8192/rollout.npz",
+        "versioned_mpc_command": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_mpc_command.npz",
         "versioned_rollout": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz"
       },
       "config_label": "n8192",
@@ -166,7 +168,13 @@
   ],
   "source_root": "/data_team/junsong/model-based/spider/outputs/g1_wbc_single_motion_homejrhangmr_compare_20260626",
   "versioned_result_assets": {
-    "n8192": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz",
-    "sweetpoint": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz"
+    "n8192": {
+      "versioned_mpc_command": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_mpc_command.npz",
+      "versioned_rollout": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/n8192_rollout.npz"
+    },
+    "sweetpoint": {
+      "versioned_mpc_command": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_mpc_command.npz",
+      "versioned_rollout": "assets/results/2026-06-26-homejrhangmr-three-way-wjs/sweetpoint_rollout.npz"
+    }
   }
 }
